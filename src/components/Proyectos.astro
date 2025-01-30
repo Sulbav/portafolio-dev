@@ -1,0 +1,50 @@
+---
+import { basicStyleSection } from "../data/config";
+import Github from "../assets/github.astro";
+
+import { pros } from "../data/proyectos.js";
+---
+
+<section
+	class={basicStyleSection + "flex flex-col gap-4 justify-center"}
+	id="proyectos"
+>
+	<h2 class="font-medium text-2xl">Proyectos</h2>
+	<div class="flex flex-col gap-4">
+		{
+			pros.map((pt) => {
+				return (
+					<div
+						class=" w-[95%] p-2 rounded gap-2  bg-[#333] flex shadow-lg shadow-[#111] justify-center items-center max-sm:flex-col "
+					>
+						<img
+							class=" w-28 rounded shadow-md shadow-[#111]"
+							src={pt.imagen}
+							alt={pt.nombre}
+						/>
+						<div class="flex flex-col flex-1 gap-1">
+							<h3 class=" text-xl font-medium text-blue-400 flex gap-4 items-center">{pt.nombre} <span
+								class={
+									(pt.status == "En desarrollo"
+										? " bg-red-500 "
+										: " bg-green-500 ") + "text-sm text-[white] font-medium px-1 rounded"
+								}
+							>
+								{pt.status}
+							</span></h3>
+							<p class="font-medium text-sm text-[#e2d9d9dc]">
+								{pt.descripcion}
+							</p>
+							<a class="flex gap-1 items-center w-20  font-medium" href={pt.url} target="_blank" rel="noreferrer">
+								<Github />
+                                GitHub
+							</a>
+                          
+						</div>
+					</div>
+				);
+			})
+		}
+		
+	</div>
+</section>

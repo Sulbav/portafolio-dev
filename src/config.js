@@ -1,1 +1,0 @@
-export const basicStyleSection = "w-[470px]"
