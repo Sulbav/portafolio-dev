@@ -1,0 +1,29 @@
+---
+import {basicStyleSection} from "../config.js"
+---
+
+<section class={"flex justify-start items-center gap-[28px] " + basicStyleSection}>
+	<img class="w-28 shadow-lg shadow-[#222] hover:scale-105 duration-500 rounded-full" onclick="" src="/perfil2.webp" alt="Abraham Sulbaran" />
+	<div class="flex flex-col">
+		<h1 class="text-2xl font-medium">Abraham Sulbaran</h1>
+		<p class="text-sm font-medium">Dedicado desarrollador Web FullStack</p>
+		<p class="text-sm">
+			<span class="text-red-400">Ven</span><span class="text-blue-400">ezu</span><span class="text-yellow-400">ela</span>, Tachira
+		</p>
+	</div>
+</section>
+
+<style>
+    @media screen and (max-width: 580px) {
+        section {
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+    }
+
+	p {
+		color: #e2d9d9dc;
+	}
+</style>
