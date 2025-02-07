@@ -1,24 +1,18 @@
 ---
-import { basicStyleSection } from "../data/config.js";
+import Container from "./Container.astro";
 ---
 
-<section
-	class={"container flex flex-col justify-center  gap-1 w-[470px] max-sm:w-[300px] " +
-		basicStyleSection}
->
-	<h2 class="font-medium text-2xl">About</h2>
-	<p class="font-medium text-sm">
-		Soy estudiante de Ingeniería en Sistemas con habilidades en ventas, manejo
-		de redes sociales, desarrollo web y atención al cliente. Tengo conocimiento
-		en Community Management y diversas tecnologias de la Web lo que me ha
-		proporcionado las herramientas necesarias para gestionar y optimizar la
-		presencia en línea de marcas y negocios. Me destaco por mi capacidad para
-		comunicarme eficazmente, resolver problemas y trabajar en equipo.
-	</p>
-</section>
-
-<style>
-	p {
-		color: #e2d9d9dc;
-	}
-</style>
+<Container id="about">
+	<div class="flex flex-col gap-3">
+		<h3 class="font-medium text-3xl">About</h3>
+		<p class="font-medium text-xl text-gray-300 text-pretty">
+			Soy estudiante de Ingeniería en Sistemas con habilidades en ventas, manejo
+			de redes sociales, desarrollo web y atención al cliente. Tengo
+			conocimiento en Community Management y diversas tecnologias de la Web, lo
+			que me ha proporcionado las herramientas necesarias para gestionar y
+			optimizar la presencia en línea de marcas y negocios. Me destaco por mi
+			capacidad para comunicarme eficazmente, resolver problemas y trabajar en
+			equipo.
+		</p>
+	</div>
+</Container>
