@@ -12,9 +12,10 @@ import Git from "./icons/Git.astro";
 import Github from "./icons/Github.astro";
 ---
 
-<Container id="tecnologias" class=" flex flex-col gap-8">
-	<h3 class="font-medium text-3xl">Tecnologias y Herramientas</h3>
-	<div class="w-full flex gap-2 flex-wrap h-72">
+<Container id="tecnologias" class=" flex flex-col items-center md:items-start gap-8">
+	<h3 class="font-medium text-3xl hidden md:flex">Tecnologias y Herramientas</h3>
+    <h3 class="font-medium text-3xl md:hidden">Tec y Herr</h3>
+	<div class="w-full flex flex-col md:flex-row gap-2 md:flex-wrap h-72">
 		<CardTec title="FrontEnd">
 			<Badge>
 				<Reactjs />Reactjs

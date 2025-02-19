@@ -6,44 +6,46 @@ import Instagram from "./icons/Instagram.astro";
 import LinkTo from "./LinkTo.astro";
 ---
 
-<Container id="perfil" class="mt-40 mb-32">
-	<div class="flex flex-col gap-8 items-start justify-center">
-		<div class="flex gap-6 items-center justify-start">
+<Container id="perfil" class="mt-40 ">
+	<div class="w-full flex flex-col gap-8 items-center md:items-start justify-center ">
+		<div class="flex flex-col md:flex-row gap-6 items-center justify-center md:justify-start">
 			<img
-				class="w-32 shadow-lg hover:scale-105 duration-500 rounded-full"
+				class="w-32 shadow-lg md:hover:scale-105 duration-500 rounded-full"
 				onclick=""
 				src="/avatar.webp"
 				alt="Abraham Sulbaran"
 			/>
 
-			<h1 class="text-5xl font-medium text-white text-pretty">
-				Hola, Soy <br /> Abraham Sulbaran
+			<h1 class="text-2xl md:text-5xl font-medium text-white text-pretty">
+				Hola, Soy <br class="hidden md:flex" /> Abraham Sulbaran
 			</h1>
 		</div>
 
-		<div class="flex flex-col gap-4 items-center justify-start text-wrap">
-			<h2 class="text-2xl font-medium text-gray-300">
-				+2 año de experiencia. <span class="text-yellow-200"
+		<div class="w-full flex flex-col gap-4 items-center justify-center md:justify-start md:text-wrap">
+			<h2 class="md:text-2xl font-medium text-gray-300 text-center md:text-start">
+				<span class="text-yellow-200"
 					>Desarrollador Web FullStack</span
 				> de Tachira <span class="text-yellow-400">Ven</span><span
 					class="text-blue-500">ezu</span
-				><span class="text-red-500">ela</span>. Expecializado en crear
-				aplicaciones unicas.
+				><span class="text-red-500">ela</span>. <span class="text-gray-400">Combierto tus ideas en aplicaciones unicas.</span>
 			</h2>
-			<nav class="flex items-start w-full">
-				<LinkTo link="https://github.com/Sulbav">
-					<Github />
-					Github
-				</LinkTo>
-				<LinkTo link="https://www.linkedin.com/in/abraham-sulbaran-123baa291/">
-					<Linkedin />
-					Linked In
-				</LinkTo>
-				<LinkTo link="https://www.instagram.com/abrahamsjz/">
-					<Instagram />
-					Intagram
-				</LinkTo>
-			</nav>
+			<div class="w-full flex justify-between">
+				<nav class="flex justify-center md:justify-start items-start w-full">
+					<LinkTo link="https://github.com/Sulbav">
+						<Github />
+						Github
+					</LinkTo>
+					<LinkTo link="https://www.linkedin.com/in/abraham-sulbaran-123baa291/">
+						<Linkedin />
+						Linked In
+					</LinkTo>
+					<LinkTo link="https://www.instagram.com/abrahamsjz/">
+						<Instagram />
+						Intagram
+					</LinkTo>
+				</nav>
+				
+			</div>
 		</div>
 	</div>
 </Container>
