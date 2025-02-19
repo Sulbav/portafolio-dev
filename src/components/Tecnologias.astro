@@ -1,0 +1,50 @@
+---
+import Badge from "./utils/Badge.astro";
+import Reactjs from "./icons/Reactjs.astro";
+import CardTec from "./utils/CardTec.astro";
+import Container from "./utils/Container.astro";
+import AstroIcon from "./icons/AstroIcon.astro";
+import TailwindCSS from "./icons/TailwindCSS.astro";
+import Nodejs from "./icons/Nodejs.astro";
+import SQL from "./icons/SQL.astro";
+import Mongodb from "./icons/Mongodb.astro";
+import Git from "./icons/Git.astro";
+import Github from "./icons/Github.astro";
+---
+
+<Container id="tecnologias" class=" flex flex-col gap-8">
+	<h3 class="font-medium text-3xl">Tecnologias y Herramientas</h3>
+	<div class="w-full flex gap-2 flex-wrap h-72">
+		<CardTec title="FrontEnd">
+			<Badge>
+				<Reactjs />Reactjs
+			</Badge>
+			<Badge>
+				<AstroIcon />Astro
+			</Badge>
+			<Badge>
+				<TailwindCSS />TailwindCSS
+			</Badge>
+		</CardTec>
+		<CardTec title="BackEnd" >
+            <Badge>
+                <Nodejs/>ExpressJS
+            </Badge>
+            <Badge>
+                <SQL/>PostgreSQL
+            </Badge>
+            <Badge>
+                <Mongodb/>MongoDB
+            </Badge>
+        </CardTec>
+		<CardTec title="Herramientas">
+            <Badge>
+                <Git/>Git
+            </Badge>
+            <Badge>
+                <Github/>GitHub
+            </Badge>
+        </CardTec>
+		
+	</div>
+</Container>

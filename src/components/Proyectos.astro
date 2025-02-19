@@ -1,24 +1,14 @@
 ---
-import Container from "./Container.astro";
+import Container from "./utils/Container.astro";
 import LinkProyect from "./LinkProyect.astro";
 
-const pros = [{
-    id:1,
-    nombre: "Sistema POS",
-    descripcion: "Un sistem POS donde podras llevar el control de tu negocio, tus clientes, empleados y mas.",
-    imagen: "/proyectos/sistema.webp",
-    status: "En desarrollo",
-    url: "https://www.google.com",
-	tecnologias: ["React","TailwindCSS","NodeJS","Express","PostgreSQL"],
-	githubURL: "https://github.com/Sulbav/SistemaPOS"
-},
+const pros = [
 {
-    id:2,
-    nombre: "Chatbot Gemini API", 
-    descripcion: "Un chatbot con el que puedes conversar, y te respondera con informacion de tus intereses. Hecho con la API de Gemini.",
+    id:1,
+    nombre: "Chatbot AI", 
+    descripcion: "Un chatbot creado con la API de Gemini",
     imagen: "/proyectos/Chatbot.webp",
-    status: "En desarrollo",
-    url: "",
+    status: "Completado",
 	tecnologias: ["React","TailwindCSS"],
 	githubURL: "https://github.com/Sulbav/chatbot-gemini"
 }]
@@ -26,12 +16,12 @@ const pros = [{
 
 <Container id="proyectos" class="flex flex-col gap-8 items-start justify-center">
 
-	<h2 class="font-medium text-2xl">Proyectos</h2>
+	<h2 class="font-medium text-3xl">Proyectos</h2>
 	<div class="flex flex-col gap-4 ">
 		{
 			pros.map((pt) => {
 				return (
-					<LinkProyect link={pt.status === "Completado" ? pt.url : pt.githubURL} title={pt.nombre} more={pt.descripcion} img={pt.status !== "Completado"? "/wip.webp":pt.imagen} key={pt.id}/>
+					<LinkProyect link={pt.githubURL} title={pt.nombre} more={pt.descripcion} img={pt.status !== "Completado"? "/wip.webp":pt.imagen} key={pt.id} tecnologias={pt.tecnologias} estatus={pt.status}/>
 				);
 			})
 		}
