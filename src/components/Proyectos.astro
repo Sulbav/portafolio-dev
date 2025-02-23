@@ -11,13 +11,22 @@ const pros = [
     status: "Completado",
 	tecnologias: ["React","TailwindCSS"],
 	githubURL: "https://github.com/Sulbav/chatbot-gemini"
+},
+{
+    id:2,
+    nombre: "Store Manager", 
+    descripcion: "Sistema para administrar productos, ventas y la contabilidad de tu tienda. Basado en Electron",
+    imagen: "/proyectos/Chatbot.webp",
+    status: "En Desarrollo",
+	tecnologias: ["React","tailwindCSS","SQLite"],
+	githubURL: "https://github.com/Sulbav/chatbot-gemini"
 }]
 ---
 
 <Container id="proyectos" class="flex flex-col gap-8 items-center md:items-start justify-center">
 
 	<h2 class="font-medium text-3xl">Proyectos</h2>
-	<div class="flex flex-col gap-4 ">
+	<div class="flex flex-col gap-4 w-full">
 		{
 			pros.map((pt) => {
 				return (
